@@ -1,0 +1,24 @@
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: micro-client
+  labels:
+    app: micro-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: micro-client
+  template:
+    metadata:
+      labels:
+        app: micro-client
+    spec:
+      containers:
+      - name: micro-client
+        image: micro-client:latest
+        envFrom:
+        - configMapRef:
+            name: micro-client-env
