@@ -11,14 +11,14 @@ import (
 )
 
 var (
-	service = "transaction-persistence"
+	service = "micro-server"
 	version = "latest"
 )
 
 func main() {
 	// Create service
 	srv := micro.NewService(
-		micro.Name("transaction-persistence-client"),
+		micro.Name(service),
 		micro.Client(grpc.NewClient()),
 		micro.Version(version))
 	srv.Init()
