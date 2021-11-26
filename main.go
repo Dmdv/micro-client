@@ -17,10 +17,14 @@ var (
 
 func main() {
 	// Create service
+	// micro.Client(grpc.NewClient()), // must come before any other options
+	// micro.Name(service),
+	// micro.Version(version),
 	srv := micro.NewService(
-		micro.Name(service),
 		micro.Client(grpc.NewClient()),
-		micro.Version(version))
+		micro.Name(service),
+		micro.Version(version),
+	)
 	srv.Init()
 
 	// Create client

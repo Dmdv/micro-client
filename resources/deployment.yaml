@@ -21,4 +21,4 @@ spec:
         image: micro-client:latest
         envFrom:
         - configMapRef:
-            name: micro-client-env
+            name: micro-env
