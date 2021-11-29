@@ -6,7 +6,6 @@ metadata:
   name: micro-env
 data:
   MICRO_CLIENT: grpc
-#  MICRO_SERVER: grpc
   MICRO_REGISTRY: kubernetes
   MICRO_SERVER_NAME: micro-server
   MICRO_SERVER_VERSION: latest

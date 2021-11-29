@@ -1,8 +1,8 @@
 # GO-MICRO: Missing documentation
 
-# micro-client
+# micro-server
 
-Client to https://github.com/Dmdv/micro-server
+https://github.com/Dmdv/micro-server
 
 ## How to build
 
