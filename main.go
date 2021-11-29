@@ -18,11 +18,11 @@ var (
 func main() {
 	// Create service
 	// micro.Client(grpc.NewClient()), // must come before any other options
-	// micro.Name(service),
-	// micro.Version(version),
+	// micro.Name(service), - is defined in config map
+	// micro.Version(version), - is defined in config map
+
 	srv := micro.NewService(
-		micro.Client(grpc.NewClient()),
-		micro.Name(service),
+		micro.Client(grpc.NewClient()), // Should be working as env var: `MICRO_CLIENT: grpc` but doesn't work
 		micro.Version(version),
 	)
 	srv.Init()
