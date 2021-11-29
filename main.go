@@ -5,14 +5,12 @@ import (
 	pb "micro-server/proto"
 	"time"
 
-	"github.com/asim/go-micro/plugins/client/grpc/v4"
 	"go-micro.dev/v4"
 	log "go-micro.dev/v4/logger"
 )
 
 var (
 	service = "micro-server"
-	version = "latest"
 )
 
 func main() {
@@ -22,8 +20,7 @@ func main() {
 	// micro.Version(version), - is defined in config map
 
 	srv := micro.NewService(
-		micro.Client(grpc.NewClient()), // Should be working as env var: `MICRO_CLIENT: grpc` but doesn't work
-		micro.Version(version),
+	//micro.Client(grpc.NewClient()), // Should be working as env var: `MICRO_CLIENT: grpc` but doesn't work
 	)
 	srv.Init()
 
