@@ -2,7 +2,6 @@
 
 # micro-server
 
-https://github.com/Dmdv/micro-server
 
 ## How to build
 
