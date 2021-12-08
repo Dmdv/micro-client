@@ -1,2 +1,4 @@
 # don't commit the service binary to vcs
 micro-client
+
+.DS_Store
