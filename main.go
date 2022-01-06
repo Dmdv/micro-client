@@ -21,6 +21,7 @@ func main() {
 
 	srv := micro.NewService(
 	//micro.Client(grpc.NewClient()), // Should be working as env var: `MICRO_CLIENT: grpc` but doesn't work
+	//micro.Name(service),
 	)
 	srv.Init()
 
